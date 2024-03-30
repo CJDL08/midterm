@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #747474; /* Gray background for the rest of the page */
+}
+
+.dashboard {
+    background-color: #202020;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 50px 20px; /* Increase the top and bottom padding to make the dashboard taller */
+    box-sizing: border-box; /* Include padding in width calculation */
+    display: flex; /* Use flexbox to control layout */
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center; /* Center items vertically */
+    z-index: 2; /* Ensure the dashboard appears above other elements */
+}
+
+.dashboard a {
+    color: white;
+    text-decoration: none;
+    margin: 10px 20px; /* Adjust margin between links, bringing down the links */
+    font-size: 1em;
+}
+
+.artwork-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px; /* Adjust margin-top to position the artwork items */
+}
+
+.artwork-item {
+    margin: 4% 4%; /* Adjust margin to create space between artwork items */
+    text-align: center; /* Center-align text within artwork item */
+}
+
+.image-container {
+    border: 3px solid rgb(255, 255, 255); /* Add border to image container */
+    padding: 10px; /* Add padding for better appearance */
+    display: inline-block; /* Make the container inline-block to fit the content */
+}
+
+.image-container img {
+    width: 500px; /* Set width of artwork images */
+    height: 600px; /* Set height of artwork images */
+}
+
+.description {
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin-top: 10px; /* Adjust margin to create space between image and description */
+}
+
+footer {
+    background-color: #202020;
+    text-align: center;
+    padding: 5px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1; /* Ensure footer appears below other elements */
+}
+
+footer {
+    background-color: #202020;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.footer-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 30px; /* Adjust padding to add distance from the left edge */
+}
+
+.footer-left img {
+    width: 30px; /* Adjust icon size as needed */
+    height: 30px;
+    margin-right: 10px; /* Adjust spacing between icons */
+}
+
+.footer-right {
+    flex-grow: 1; /* Allow the right content to grow and take up remaining space */
+    text-align: right; /* Align text to the right */
+    padding-right: 20px; /* Adjust padding to add distance from the right edge */
+}
+
+.footer-right h5 {
+    margin: 0; /* Reset margin for the h5 element */
+    font-size: 20px; /* Adjust font size as needed */
+}
