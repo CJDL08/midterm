@@ -106,3 +106,50 @@ footer {
     margin: 0; /* Reset margin for the h5 element */
     font-size: 20px; /* Adjust font size as needed */
 }
+
+@media only screen and (max-width: 768px) {
+    .gallery-container {
+        flex-direction: column; /* Change gallery container layout to column on smaller screens */
+        align-items: center; /* Center align items on smaller screens */
+        justify-content: flex-start; /* Align items to the start of the flex container */
+        margin-top: 150px; /* Adjust margin top for smaller screens to ensure content is not covered by the dashboard */
+    }
+
+    .thumbnails {
+        grid-template-columns: repeat(3, 1fr); /* Display thumbnails in three columns on smaller screens */
+        gap: 10px; /* Add gap between thumbnails */
+        width: 60%; /* Set width for thumbnails */
+    }
+
+    .thumbnails img {
+        width: 100%; /* Set thumbnails width to 100% */
+        max-width: none; /* Remove maximum width constraint */
+    }
+
+    .display {
+        width: 100%; /* Set width for the display container */
+        margin-top: 20px; /* Add margin between thumbnails and display image */
+    }
+
+    .display img {
+        max-width: 100%; /* Adjust maximum width for displayed image on smaller screens */
+        max-height: 70vh; /* Adjust maximum height for displayed image on smaller screens */
+    }
+    
+    .dashboard {
+        z-index: 2; /* Ensure the dashboard appears below other elements */
+    }
+    footer {
+        flex-direction: column; /* Arrange footer items vertically for smaller screens */
+    }
+
+    .footer-left,
+    .footer-right {
+        justify-content: center; /* Center align footer items for smaller screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .footer-right h5 {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}

@@ -1,124 +1,161 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #8f8f8f; /* Gray background for the rest of the page */
-  }
-  
-  .background-section {
-    background-color: #8f8f8f; /* Gray background for the section */
-    background-image: url('../images/dh_2.jpg'); /* Replace 'your-image-url.jpg' with the URL of your image */
-    background-size: auto; /* Auto size */
-    background-position: center; /* Center the background image */
-    padding: 26%; /* Adjust padding as needed */
-    position: relative; /* Make the section position relative */
-    z-index: 1; /* Ensure the background section appears behind other elements */
-  }
-  
-  .dashboard {
-    background-color: #202020;
-    color: white;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    padding: 50px 20px; /* Increase the top and bottom padding to make the dashboard taller */
-    box-sizing: border-box; /* Include padding in width calculation */
-    display: flex; /* Use flexbox to control layout */
-    justify-content: flex-end; /* Align items to the right */
-    align-items: center; /* Center items vertically */
-    z-index: 2; /* Ensure the dashboard appears above other elements */
-  }
-  
-  .dashboard a {
-    color: white;
-    text-decoration: none;
-    margin: 10px 20px; /* Adjust margin between links, bringing down the links */
-    font-size: 1em;
-  }
+  margin: 0;
+  padding: 0;
+  background-color: #8f8f8f; /* Gray background for the rest of the page */
+}
 
-  .profile-picture {
-    position: absolute; /* Position the profile picture absolutely */
-    top: 15%; /* Adjust the top position */
-    left: 10%; /* Adjust the left position */
-    transform: translate(-50%, -50%); /* Center the picture horizontally and vertically */
-    z-index: 3; /* Ensure the picture appears between the dashboard and body content */
-    width: 150px; /* Set the width of the picture */
-    height: 200px; /* Set the height of the picture */
-    border-radius: 50%; /* Make the border radius 50% to create a circular shape */
-    overflow: hidden; /* Hide the parts of the picture that exceed the circular shape */
-  }
-  
-  /* Optional: Add a border or box shadow to the circular profile picture */
-  .profile-picture {
-    border: 2px solid white; /* Add a white border */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
-  }     
-  
-  .intro {
-    font-family: 'Inter';
-    font-size: 40px;
-    line-height: 1.333;
-    text-align: center; /* Center the text */
-    position: absolute; /* Position the intro text absolutely */
-    top: 50%; /* Adjust the bottom position as needed */
-    right: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center horizontally */
-    color: white; /* Text color */
-    z-index: 2; /* Ensure the intro appears above the background section */
-  }
-  
-  .intro p {
-    margin: 0; /* Reset margin for the paragraph */
-  }
-  .intro h1{
-    color:#FF0000;
-    font-size: 80px;
-    font-weight: bold;
-  }
-  
-  .intro .white {
-    color: white;
-  }
-  
-  .intro .red {
-    color: #FF0000;
-  }
-  
-  footer {
-    background-color: #202020;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1;
+.background-section {
+  background-color: #8f8f8f; /* Gray background for the section */
+  background-image: url('../images/dh_2.jpg'); /* Replace 'your-image-url.jpg' with the URL of your image */
+  background-size: cover; /* Ensure the background image covers the entire section */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent background image from repeating */
+  padding: 50vh 0; /* Adjust padding using viewport height units (vh) */
+  margin: 0; /* Remove any margin to prevent unwanted space */
+  position: relative; /* Make the section position relative */
+  z-index: 1; /* Ensure the background section appears behind other elements */
+}
+
+.dashboard {
+  background-color: #202020;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 6vh; /* Adjust padding as needed */
+  box-sizing: border-box; /* Include padding in width calculation */
+  display: flex; /* Use flexbox to control layout */
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center; /* Center items vertically */
+  z-index: 2; /* Ensure the dashboard appears above other elements */
+}
+
+.dashboard a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px; /* Adjust margin between links */
+  font-size: 1em;
+}
+
+.profile-picture {
+  position: absolute; /* Position the profile picture absolutely */
+  top: 15%; /* Adjust the top position */
+  left: 10%; /* Adjust the left position */
+  transform: translate(-50%, -50%); /* Center the picture horizontally and vertically */
+  z-index: 3; /* Ensure the picture appears between the dashboard and body content */
+  width: 150px; /* Set the width of the picture */
+  height: 200px; /* Set the height of the picture */
+  border: 2px solid white; /* Add a white border */
+  border-radius: 50%; /* Make the border radius 50% to create a circular shape */
+  overflow: hidden; /* Hide the parts of the picture that exceed the circular shape */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+}
+
+.intro {
+  font-family: 'Inter';
+  font-size: 40px;
+  line-height: 1.333;
+  text-align: center; /* Center the text */
+  position: absolute; /* Position the intro text absolutely */
+  top: 50%; /* Adjust the vertical position */
+  left: 10%; /* Position on the left side */
+  transform: translateY(-50%); /* Center vertically */
+  color: white; /* Text color */
+  z-index: 2; /* Ensure the intro appears above the background section */
+}
+
+.intro p {
+  margin: 0; /* Reset margin for the paragraph */
+}
+
+.intro h1 {
+  color: #FF0000;
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.intro .white {
+  color: white;
+}
+
+.intro .red {
+  color: #FF0000;
+}
+
+footer {
+  background-color: #202020;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
 }
 
 .footer-left {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 30px; /* Adjust padding to add distance from the left edge */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 30px; /* Adjust padding to add distance from the left edge */
 }
 
 .footer-left img {
-    width: 30px; /* Adjust icon size as needed */
-    height: 30px;
-    margin-right: 10px; /* Adjust spacing between icons */
+  width: 30px; /* Adjust icon size as needed */
+  height: 30px;
+  margin-right: 10px; /* Adjust spacing between icons */
 }
 
 .footer-right {
-    flex-grow: 1; /* Allow the right content to grow and take up remaining space */
-    text-align: right; /* Align text to the right */
-    padding-right: 20px; /* Adjust padding to add distance from the right edge */
+  flex-grow: 1; /* Allow the right content to grow and take up remaining space */
+  text-align: right; /* Align text to the right */
+  padding-right: 20px; /* Adjust padding to add distance from the right edge */
 }
 
 .footer-right h5 {
-    margin: 0; /* Reset margin for the h5 element */
-    font-size: 20px; /* Adjust font size as needed */
+  margin: 0; /* Reset margin for the h5 element */
+  font-size: 16px; /* Adjust font size as needed */
 }
 
-  
+@media only screen and (max-width: 768px) {
+  /* Adjustments for smaller screens */
+  .background-section {
+    padding: 100% 0; /* Adjust padding as needed for smaller screens */
+  }
+
+  .profile-picture {
+      width: 100px; /* Adjust profile picture width for smaller screens */
+      height: 150px; /* Adjust profile picture height for smaller screens */
+  }
+
+  .intro {
+    font-size: 30px; /* Adjust font size for smaller screens */
+    max-width: 90%; /* Limit the maximum width to prevent overflow */
+    padding: 0 20px; /* Add padding to keep text within screen boundaries */
+    top: 40%; /* Adjust the vertical position for smaller screens */
+    left: 5%; /* Adjust the left position for smaller screens */
+}
+  .intro h1 {
+      font-size: 60px; /* Adjust h1 font size for smaller screens */
+  }
+
+  footer {
+    flex-direction: column; /* Arrange footer items vertically for smaller screens */
+}
+
+.footer-left,
+.footer-right {
+    justify-content: center; /* Center align footer items for smaller screens */
+    padding: 10px; /* Adjust padding for smaller screens */
+}
+
+.footer-right h5 {
+    font-size: 14px; /* Adjust font size for smaller screens */
+}
+.dashboard{
+  z-index: 3;
+}
+}

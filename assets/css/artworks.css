@@ -33,37 +33,27 @@ body {
 }
 
 .artwork-item {
-    margin: 4% 4%; /* Adjust margin to create space between artwork items */
+    margin: 4% 2%; /* Adjust margin to create space between artwork items */
     text-align: center; /* Center-align text within artwork item */
+    max-width: 500px; /* Limit the maximum width of the artwork item */
 }
 
 .image-container {
-    border: 3px solid rgb(255, 255, 255); /* Add border to image container */
-    padding: 10px; /* Add padding for better appearance */
-    display: inline-block; /* Make the container inline-block to fit the content */
+    display: inline-block;
+    border: 3px solid rgb(255, 255, 255);
+    box-sizing: border-box; /* Include padding and border in the width calculation */
 }
 
 .image-container img {
-    width: 500px; /* Set width of artwork images */
-    height: 600px; /* Set height of artwork images */
+    max-width: 100%; /* Set the maximum width of the image to 100% */
+    height: auto; /* Allow the height to adjust proportionally */
 }
 
 .description {
-    font-size: 40px;
+    font-size: 24px; /* Adjust font size for description */
     font-weight: bold;
     color: rgb(255, 255, 255);
     margin-top: 10px; /* Adjust margin to create space between image and description */
-}
-
-footer {
-    background-color: #202020;
-    text-align: center;
-    padding: 5px;
-    color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    z-index: 1; /* Ensure footer appears below other elements */
 }
 
 footer {
@@ -101,5 +91,31 @@ footer {
 
 .footer-right h5 {
     margin: 0; /* Reset margin for the h5 element */
-    font-size: 20px; /* Adjust font size as needed */
+    font-size: 16px; /* Adjust font size as needed */
+}
+
+@media only screen and (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    .artwork-item {
+        margin: 20% 1%; /* Adjust margin for smaller screens */
+        width: auto;
+    }
+
+    .description {
+        font-size: 20px; /* Adjust font size for smaller screens */
+    }
+
+    footer {
+        flex-direction: column; /* Arrange footer items vertically for smaller screens */
+    }
+
+    .footer-left,
+    .footer-right {
+        justify-content: center; /* Center align footer items for smaller screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .footer-right h5 {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
 }
