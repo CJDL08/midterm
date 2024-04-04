@@ -10,7 +10,7 @@ body {
     position: fixed;
     width: 100%;
     top: 0;
-    padding: 50px 20px; /* Increase the top and bottom padding to make the dashboard taller */
+    padding: 30px 20px; /* Increase the top and bottom padding to make the dashboard taller */
     box-sizing: border-box; /* Include padding in width calculation */
     display: flex; /* Use flexbox to control layout */
     justify-content: flex-end; /* Align items to the right */
@@ -29,13 +29,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px; /* Adjust margin-top to position the artwork items */
+    margin-top: 50px; /* Adjust margin-top to position the artwork items */
 }
 
 .artwork-item {
-    margin: 4% 2%; /* Adjust margin to create space between artwork items */
+    margin: 5% 2%; /* Adjust margin to create space between artwork items */
     text-align: center; /* Center-align text within artwork item */
-    max-width: 500px; /* Limit the maximum width of the artwork item */
+    max-width: 450px; /* Limit the maximum width of the artwork item */
 }
 
 .image-container {
@@ -54,6 +54,9 @@ body {
     font-weight: bold;
     color: rgb(255, 255, 255);
     margin-top: 10px; /* Adjust margin to create space between image and description */
+    animation-duration: 3s;
+    animation-name: slidein;
+  
 }
 
 footer {
@@ -119,3 +122,14 @@ footer {
         font-size: 14px; /* Adjust font size for smaller screens */
     }
 }
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }

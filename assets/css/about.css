@@ -9,7 +9,7 @@ body {
   background-size: contain; /* Change 'cover' to 'contain' */
   background-position: center;
   background-repeat: no-repeat;
-  padding: 70vh 0;
+  padding: 75vh 0;
   margin: 0;
   position: relative;
   z-index: 1;
@@ -60,6 +60,8 @@ body {
   left: 32%;
   transform: translate(-50%, -50%);
   color: white;
+  animation-duration: 3s;
+    animation-name: slidein;
   z-index: 2;
 }
 
@@ -74,7 +76,7 @@ body {
 }
 
 .intro .white {
-  color: #616161;
+  color: #ffffff;
 }
 
 .intro .red {
@@ -82,7 +84,7 @@ body {
 }
 
 .intro h3, .intro h5 {
-  color: #616161;
+  color: #ffffff;
   margin: 10px 0;
 }
 
@@ -97,7 +99,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1;
+  z-index: 3;
 }
 
 .footer-left {
@@ -171,4 +173,15 @@ footer {
 .footer-right h5 {
     font-size: 14px; /* Adjust font size for smaller screens */
 }
+}
+@keyframes slidein {
+  from {
+    margin-right: 200%;
+    width: 200%;
+  }
+
+  to {
+    margin-right: 50%;
+    width: 50%;
+  }
 }

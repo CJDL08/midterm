@@ -61,6 +61,8 @@ body {
   left: 10%; /* Position on the left side */
   transform: translateY(-50%); /* Center vertically */
   color: white; /* Text color */
+  animation-duration: 3s;
+  animation-name: slidein;
   z-index: 2; /* Ensure the intro appears above the background section */
 }
 
@@ -158,4 +160,16 @@ footer {
 .dashboard{
   z-index: 3;
 }
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 200%;
+  }
+
+  to {
+    margin-left: 1%;
+    width: 32%;
+  }
 }
